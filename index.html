@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aleo&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1b17ebe6a4.js"></script>
+    <script src="./script.js"></script>
+    <title>Agustin Borda</title>
+  </head>
+  <body>
+    <section id="inicio">
+        <div class="video-container">
+          <video autoplay muted loop>
+            <source src="/imagenes/Person Typing Fast.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="contenido-inicio">
+            <div class="inicio-texto-container">
+                <h2 class="inicio-h2">Agustin Borda</h2>
+                <h6 class="inicio-h6">Full Stack Developer</h6>
+                <i class="fa-solid fa-angles-down fa-fade"></i>
+            </div>  
+        </div>
+    </section>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#Proyectos">Mis Proyectos</a></li>
+                <li><a href="#SobreMi">Sobre mi</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#skills">Skills</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script type="text/javascript">
+    window.addEventListener('scroll', function() {
+    var navbar = document.querySelector('nav');
+    var welcomeSection = document.querySelector('.video-container');
+  
+    if (window.scrollY >= welcomeSection.offsetHeight) {
+        navbar.classList.add('navbar-fixed');
+    } else {
+        navbar.classList.remove('navbar-fixed');
+    }
+    });
+
+    </script>
+    <main>
+        <article id="SobreMi">
+            <div class="sobremi-container">
+                <h2 class="titulo">Sobre Mi</h2>
+                <div class="informacion-container" data-aos="fade-up">
+                    <p class="informacion">Soy un estudiante de segundo año de Licenciatura en Sistemas en Argentina, con 19 años de edad. Me apasiona la programación y he aprendido por mi cuenta varios lenguajes. Mi objetivo es trabajar en una empresa en la que pueda aplicar mis habilidades y conocimientos para desarrollar soluciones innovadoras y eficientes. Me interesa especialmente el diseño de páginas web, pero también disfruto trabajar en el backend. Mi experiencia personal en programación me ha permitido adquirir habilidades como la capacidad de aprendizaje autónomo, la resolución de problemas y el trabajo en equipo. Además, he realizado algunos proyectos personales que demuestran mi habilidad para desarrollar soluciones creativas y funcionales. Estoy buscando oportunidades de trabajo que me permitan seguir desarrollando mis habilidades y conocimientos en programación, mientras colaboro en proyectos interesantes y desafiantes.
+                    </p>
+                </div>
+            </div>
+        </article>
+
+        <article id="Proyectos">
+            <div class="proyectos-container">
+                <h2 class="titulo">Mis proyectos</h2>
+                <div class="empresa-container">
+                    <h5 class="empresa-nombre"><i class="fa-solid fa-briefcase"></i>WebWizards</h5>
+                </div>
+                <p class="info-empresa" data-aos="fade-up">Es una empresa que cree junto a 2 compañeros, fundada el 1 de Marzo de 2023. La idea surgio para poder poner en practica nuestras herramientas de programacion y edicion, para asi ganar mas experiencia e ingresos. La empresa es un servicio de marketing, nuestro fin era contactarnos con empresas para ofrecerles nuestro servicio de creacion de paginas web, edicion, y host. Ademas tenemos nuestra propia pagina en la que los clientes pueden saber mas sobre la empresa.</p>                      
+                </div class="proyectos-wizards">
+                    <div class="card" >
+                        <a href="https://webwizardscompany.000webhostapp.com/" target="_blank" data-aos="flip-up"><img src="./imagenes/w.png"></a>
+                    </div>
+                <div>
+            </div>
+        </article>
+
+        <article id="estudios">
+            <div class="estudios-titulo">
+                <h2 class="titulo">Estudios</h2>
+            </div>
+            <div class="estudios-container">
+                <div class="estudios-nombres" data-aos="zoom-in-down">
+                    <div class="estudios-icono">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="estudios-universitarios">
+                        <h5 class="titulo">Licenciatura en sistemas</h5>
+                        <span class="año">2022 - Cursando</span>
+                        <span class="lugar">Universidad Nacional de Lanus</span>
+                    </div>
+                </div>
+                <div class="estudios-nombres" data-aos="zoom-in-down">
+                    <div class="estudios-icono">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="estudios-secundarios">
+                        <h5 class="titulo">Escuela Secundaria</h5>
+                        <span class="año">2016 - 2021</span>
+                        <span class="modalidad">Modalidad: Bachiller</s>
+                    </div>
+                </div>
+                <div class="estudios-nombres" data-aos="zoom-in-down">
+                    <div class="estudios-icono">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="estudios-universitarios">
+                        <h5 class="titulo">Hardvar University - CS50</h5>
+                        <span class="año">2023 - Cursando</span>
+                        <span class="lugar">Ciencias de la computacion</span>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article id="skills">
+            <div class="tipos">
+                <h2>Skills</h2>
+            </div>
+            <div class="slider">
+                <div class="slide-track" >
+                    <div><img src="imagenes/c (1).png"></div>
+                    <div><img src="imagenes/c (2).png"></div>
+                    <div><img src="imagenes/c (4).png"></div>
+                    <div><img src="imagenes/c (5).png"></div>
+                    <div><img src="imagenes/c (6).png"></div>
+                    <div><img src="imagenes/c (7).png"></div>
+                    <div><img src="imagenes/c (8).png"></div>
+                    <div><img src="imagenes/c (1).png"></div>
+                    <div><img src="imagenes/c (2).png"></div>
+                    <div><img src="imagenes/c (4).png"></div>
+                    <div><img src="imagenes/c (5).png"></div>
+                    <div><img src="imagenes/c (6).png"></div>
+                    <div><img src="imagenes/c (7).png"></div>
+                    <div><img src="imagenes/c (8).png"></div>
+                </div>
+            </div>
+        </article>
+
+        <article id="contacto">
+            <h2>Redes</h2>
+            <div class="redes" data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="200"
+            data-aos-offset="0">>
+                <div class="iconos">
+                    <a href="https://www.linkedin.com/in/agustin-hernan-borda-85150921b/" target="_blank"> 
+                    <i class="fa-brands fa-linkedin"></i>
+                    <span>Agustin Hernan Borda</span>
+                    </a>
+                </div>
+                <div class="iconos">
+                    <a href="https://mail.google.com/mail/u/1/?pli=1#inbox?compose=CllgCJTLGSnFHcNXMjKWSSxXJHqjWJbDtbXPTXXnJPWzCMSSgTgQQbPNLRCxCcsbqKdkpWtRrcL" target="_blank">  
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>agustinhborda@gmail.com</span>
+                    </a>
+                </div>
+                <div class="iconos">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+54 011 2868-3516</span>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+
+    </footer>
+  </body>
+    <!-- Scripts -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js'></script> <!-- path of bodymovin library-->
+    <script src="https://kit.fontawesome.com/1b17ebe6a4.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        window.addEventListener("scroll", function(){
+          var header = document.querySelector("header");
+          header.classList.toggle("abajo",window.scrollY>0);
+        })  
+      </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</html>
