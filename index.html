@@ -1,232 +1,424 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="es">
   <head>
-    <link rel="stylesheet" href="estilo.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Aleo&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/1b17ebe6a4.js"></script>
-    <script src="./script.js"></script>
-    <title>Agustin Borda</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b1220" />
+
+    <title>Agus Borda — APIs · ORDS · Oracle</title>
+    <meta
+      name="description"
+      content="Portfolio de Agus Borda. Desarrollo de servicios y APIs (ORDS/REST), Oracle/PL/SQL, SQL performance y frontend web (Angular)."
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Agus Borda — APIs · ORDS · Oracle" />
+    <meta
+      property="og:description"
+      content="Servicios y APIs (ORDS/REST), Oracle/PL/SQL, SQL performance y desarrollo web (Angular)."
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <script
+      src="https://kit.fontawesome.com/1b17ebe6a4.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- AOS (scroll animations) -->
+    <link
+      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="estilo.css" />
+    <script defer src="script.js"></script>
   </head>
+
   <body>
-    <section id="inicio">
-        <div class="video-container">
-          <video autoplay muted loop>
-            <source src="/imagenes/Person Typing Fast.mp4" type="video/mp4">
-          </video>
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+
+    <!-- Top bar -->
+    <header class="topbar" id="top">
+      <div class="container topbar__inner">
+        <a class="brand" href="#top" aria-label="Inicio">
+          <span class="brand__dot" aria-hidden="true"></span>
+          <span class="brand__text">Agus Borda</span>
+        </a>
+
+        <nav class="nav" aria-label="Navegación principal">
+          <button class="nav__toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+          <ul class="nav__list">
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li>
+              <button class="theme" type="button" aria-label="Cambiar tema">
+                <i class="fa-solid fa-moon" aria-hidden="true"></i>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" aria-label="Presentación">
+      <div class="hero__bg" aria-hidden="true">
+        <video class="hero__video" autoplay muted loop playsinline preload="metadata">
+          <source src="imagenes/Person Typing Fast.mp4" type="video/mp4" />
+        </video>
+        <div class="hero__overlay"></div>
+        <div class="hero__grid"></div>
+      </div>
+
+      <div class="container hero__content" id="contenido">
+        <div class="hero__left" data-aos="fade-up" data-aos-delay="50">
+          <p class="pill">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            Banfield, Buenos Aires · Remoto
+          </p>
+          <h1>
+            Desarrollo backend
+            <span class="grad">Servicios · APIs · Oracle</span>
+          </h1>
+          <p class="lead">
+            Me especializo en construir <strong>servicios y APIs</strong> robustas: ORDS/REST, modelado de datos,
+            PL/SQL Suite Oracle, y optimización de SQL. También tengo base de frontend (Angular) para
+            integraciones end-to-end. Disfruto convertir reglas de negocio complejas en soluciones claras y mantenibles.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#contacto">
+              Contactar
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+            <a class="btn btn--ghost" href="#proyectos">Ver proyectos</a>
+          </div>
+
+          <div class="hero__chips" aria-label="Tecnologías principales">
+            <span class="chip">ORDS</span>
+            <span class="chip">REST APIs</span>
+            <span class="chip">Oracle · PL/SQL</span>
+            <span class="chip">SQL Performance</span>
+            <span class="chip">Angular</span>
+            <span class="chip">Web Apps</span>
+          </div>
         </div>
-        <div class="contenido-inicio">
-            <div class="inicio-texto-container">
-                <h2 class="inicio-h2">Agustin Borda</h2>
-                <h6 class="inicio-h6">Full Stack Developer</h6>
-                <i class="fa-solid fa-angles-down fa-fade"></i>
-            </div>  
-        </div>
+
+        <aside class="hero__right" data-aos="zoom-in" data-aos-delay="150">
+          <div class="card profile">
+            <div class="profile__img">
+              <img src="imagenes/AgustinPerfil.jpeg" alt="Foto de perfil de Agus Borda" />
+            </div>
+            <div class="profile__meta">
+              <h2 class="profile__name">Agustin Hernán Borda</h2>
+              <p class="profile__role">Full‑Stack con foco en backend</p>
+              <div class="profile__facts">
+                <div class="fact"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i><span>Lic. en Sistemas (UNLa)</span></div>
+                <div class="fact"><i class="fa-solid fa-plug" aria-hidden="true"></i><span>Servicios & APIs (ORDS/REST)</span></div>
+                <div class="fact"><i class="fa-solid fa-database" aria-hidden="true"></i><span>Oracle / PL/SQL · SQL Perf</span></div>
+                <div class="fact"><i class="fa-brands fa-angular" aria-hidden="true"></i><span>Angular · Java</span></div>
+              </div>
+              <div class="profile__links">
+                <a class="iconbtn" href="https://www.linkedin.com/in/agustin-hernan-borda-85150921b/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                  <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a class="iconbtn" href="https://github.com/AgusBorda" target="_blank" rel="noreferrer" aria-label="GitHub">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                </a>
+                <a class="iconbtn" href="#contacto" aria-label="Contacto">
+                  <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <a class="scroll" href="#sobre-mi" aria-label="Bajar a Sobre mí">
+        <i class="fa-solid fa-angles-down" aria-hidden="true"></i>
+      </a>
     </section>
 
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#Proyectos">Mis Proyectos</a></li>
-                <li><a href="#SobreMi">Sobre mi</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-                <li><a href="#skills">Skills</a></li>
-            </ul>
-        </nav>
-    </header>
-    <script type="text/javascript">
-    window.addEventListener('scroll', function() {
-    var navbar = document.querySelector('nav');
-    var welcomeSection = document.querySelector('.video-container');
-  
-    if (window.scrollY >= welcomeSection.offsetHeight) {
-        navbar.classList.add('navbar-fixed');
-    } else {
-        navbar.classList.remove('navbar-fixed');
-    }
-    });
-
-    </script>
+    <!-- About -->
     <main>
-        <article id="SobreMi">
-            <h2 class="titulo">Sobre Mi</h2>
-            <div class="sobremi-container">
-                <div class="carta-info" data-aos="zoom-in">
-                    <div class="carta-foto">
-                        <img src="imagenes/AgustinPerfil.jpeg">
-                    </div>
-                    <div class="carta-descripcion">
-                        <div class="carta-descripcion-cont">   
-                            <i class="fa-sharp fa-solid fa-graduation-cap"></i>
-                            <span>Licenciatura en Sistemas</span>
-                        </div>
-                        <div class="carta-descripcion-cont">
-                            <i class="fa-sharp fa-solid fa-building-columns"></i>
-                            <span>Universidad Nacional de Lanus</span>
-                        </div>
-                        <div class="carta-descripcion-cont">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span>Banfield, Buenos Aires</span>
-                        </div>
-                        <div class="carta-descripcion-cont">
-                            <i class="fa-brands fa-github"></i> 
-                            <span>AgusBorda </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="informacion-container" data-aos="fade-up">
-                    <p class="informacion">Soy un estudiante de sistemas apasionado por la tecnología y el desarrollo de software. Estoy familiarizado con los conceptos de estructuras de datos y algoritmos, lo que me permite implementar soluciones eficientes y efectivas. Soy un colaborador eficaz y tengo una gran capacidad para resolver problemas, así como para aprender rápidamente. <br>Mi objetivo es trabajar en una empresa en la que pueda aplicar mis habilidades y conocimientos para desarrollar soluciones innovadoras y eficientes. Además, he realizado algunos proyectos personales que demuestran mi habilidad para desarrollar soluciones creativas y funcionales. Estoy buscando oportunidades de trabajo que me permitan seguir desarrollando mis habilidades y conocimientos, mientras colaboro en proyectos interesantes y desafiantes.
-                    </p>
-                </div>
-            </div>
-        </article>
+      <section class="section" id="sobre-mi">
+        <div class="container">
+          <div class="section__head">
+            <h2>Sobre mí</h2>
+            <p>
+              Perfil técnico orientado a resultados: entiendo el negocio, lo bajo a datos y lo convierto
+              en código confiable.
+            </p>
+          </div>
 
-        <article id="Proyectos">
-            <div class="proyectos-container">
-                <h2 class="titulo">Mis proyectos</h2>
-                <div class="empresa-container">
-                    <h5 class="empresa-nombre"><i class="fa-solid fa-briefcase"></i>WebWizards</h5>
-                </div>
-                <p class="info-empresa" data-aos="fade-up">Es una empresa que cree junto a 2 compañeros, fundada el 1 de Marzo de 2023. La idea surgio para poder poner en practica nuestras herramientas de programacion y edicion, para asi ganar mas experiencia e ingresos. La empresa es un servicio de marketing, nuestro fin era contactarnos con empresas para ofrecerles nuestro servicio de creacion de paginas web, edicion, y host. Ademas tenemos nuestra propia pagina en la que los clientes pueden saber mas sobre la empresa. La pagina junto a su informacion se encuentra apretando la imagen.</p>                      
-                <div class="proyectos-wizards">
-                    <div class="card" >
-                        <a href="https://webwizardscompany.000webhostapp.com/" target="_blank" data-aos="flip-up"><img src="./imagenes/w.png"></a>
-                    </div>
-                </div>
+          <div class="grid2">
+            <div class="card" data-aos="fade-up">
+              <h3>Qué hago</h3>
+              <ul class="list">
+                <li>
+                  <strong>Backend y datos:</strong> PL/SQL, paquetes, triggers, procedimientos,
+                  modelado y performance.
+                </li>
+                <li>
+                  <strong>APIs y servicios:</strong> diseño de endpoints REST, validaciones y
+                  manejo de errores (incl. flujos con JSON).
+                </li>
+                <li>
+                  <strong>Calidad:</strong> foco en legibilidad, consistencia y mantenimiento.
+                </li>
+              </ul>
             </div>
-            <div class="proyectos-container">
-                <div class="empresa-container">
-                    <h5 class="empresa-nombre"><i class="fa-solid fa-calculator"></i>To Do - Tareas</h5>
-                </div>
-                <p class="info-empresa" data-aos="fade-up">Esta fue una aplicacion web que cree mientras aprendia PHP y SQL, la idea era tener una aplciacion con alta y bajas, y con registro de usuarios. Asi tambien le quise dar un poco de funcionalidad. Fue desarrollada con el framework Codeignither 4, los lenguajes que utilice fueron: Boostrap 5, PHP, MySql y HTML/CSS</p>                      
-                <div class="proyectos-wizards">
-                    <div class="card" >
-                        <a href="https://todo-agustinborda.000webhostapp.com/" target="_blank" data-aos="flip-up"><img src="./imagenes/image.png"></a>
-                    </div>
-                </div>
-            </div>
-          <div class="proyectos-container">
-                <div class="empresa-container">
-                    <h5 class="empresa-nombre"><i class="fa-solid fa-coins"></i>Controlador de Gastos</h5>
-                </div>
-                <p class="info-empresa" data-aos="fade-up">Controlador de gastos, esta es una aplicacion desarrollada con el fin de almacenar los gastos de una persona, y poder tener una "vision" mas clara y detallada de tus gastos, ademas de tener un registro. Fue una de mis primeras aplciaciones, si bien no tiene un almacen de datos y es momentanea la informacion, me sirvio para desarrollar mis habilidades con JS. Esta app fue creada simplemente con HTML, CSS y JavaScript.</p>                      
-                <div class="proyectos-wizards">
-                    <div class="card" >
-                        <a href="https://controlador-gastos-agustinborda.netlify.app/" target="_blank" data-aos="flip-up"><img src="./imagenes/controladordegastos.png"></a>
-                    </div>
-                </div>
-            </div>
-        </article>
 
-        <article id="estudios">
-            <div class="estudios-titulo">
-                <h2 class="titulo">Estudios</h2>
+            <div class="card" data-aos="fade-up" data-aos-delay="80">
+              <h3>Cómo trabajo</h3>
+              <div class="steps">
+                <div class="step">
+                  <span class="step__n">1</span>
+                  <div>
+                    <p class="step__t">Entiendo la regla de negocio</p>
+                    <p class="step__d">Pregunto lo mínimo necesario y documento supuestos.</p>
+                  </div>
+                </div>
+                <div class="step">
+                  <span class="step__n">2</span>
+                  <div>
+                    <p class="step__t">Diseño simple primero</p>
+                    <p class="step__d">Valido el flujo y recién después optimizo y refactorizo.</p>
+                  </div>
+                </div>
+                <div class="step">
+                  <span class="step__n">3</span>
+                  <div>
+                    <p class="step__t">Performance sin magia</p>
+                    <p class="step__d">Índices, planes de ejecución y SQL bien escrito.</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="estudios-container">
-                <div class="estudios-nombres" data-aos="zoom-in-down">
-                    <div class="estudios-icono">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                    </div>
-                    <div class="estudios-universitarios">
-                        <h5 class="titulo">Licenciatura en sistemas</h5>
-                        <span class="año">2022 - Cursando</span>
-                        <span class="lugar">Universidad Nacional de Lanus</span>
-                    </div>
-                </div>
-                <div class="estudios-nombres" data-aos="zoom-in-down">
-                    <div class="estudios-icono">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                    </div>
-                    <div class="estudios-secundarios">
-                        <h5 class="titulo">Escuela Secundaria</h5>
-                        <span class="año">2016 - 2021</span>
-                        <span class="modalidad">Modalidad: Bachiller</s>
-                    </div>
-                </div>
-                <div class="estudios-nombres" data-aos="zoom-in-down">
-                    <div class="estudios-icono">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                    </div>
-                    <div class="estudios-universitarios">
-                        <h5 class="titulo">Hardvar University - CS50</h5>
-                        <span class="año">2023 - Cursando</span>
-                        <span class="lugar">Ciencias de la computacion</span>
-                    </div>
-                </div>
-            </div>
-        </article>
+          </div>
+        </div>
+      </section>
 
-        <article id="skills">
-            <div class="tipos">
-                <h2>Skills</h2>
-            </div>
-            <div class="slider">
-                <div class="slide-track" >
-                    <div><img src="imagenes/c (1).png"></div>
-                    <div><img src="imagenes/c (2).png"></div>
-                    <div><img src="imagenes/c (4).png"></div>
-                    <div><img src="imagenes/c (5).png"></div>
-                    <div><img src="imagenes/c (6).png"></div>
-                    <div><img src="imagenes/c (7).png"></div>
-                    <div><img src="imagenes/c (8).png"></div>
-                    <div><img src="imagenes/c (1).png"></div>
-                    <div><img src="imagenes/c (2).png"></div>
-                    <div><img src="imagenes/c (4).png"></div>
-                    <div><img src="imagenes/c (5).png"></div>
-                    <div><img src="imagenes/c (6).png"></div>
-                    <div><img src="imagenes/c (7).png"></div>
-                    <div><img src="imagenes/c (8).png"></div>
-                </div>
-            </div>
-        </article>
+      <!-- Skills -->
+      <section class="section section--alt" id="skills">
+        <div class="container">
+          <div class="section__head">
+            <h2>Skills</h2>
+            <p>Stack principal y herramientas con las que trabajo en el día a día.</p>
+          </div>
 
-        <article id="contacto">
-            <h2>Redes</h2>
-            <div class="redes" data-aos="fade-zoom-in"
-            data-aos-easing="ease-in-back"
-            data-aos-delay="200"
-            data-aos-offset="0">>
-                <div class="iconos">
-                    <a href="https://www.linkedin.com/in/agustin-hernan-borda-85150921b/" target="_blank"> 
-                    <i class="fa-brands fa-linkedin"></i>
-                    <span>Agustin Hernan Borda</span>
-                    </a>
-                </div>
-                <div class="iconos">
-                    <a href="https://mail.google.com/mail/u/1/?pli=1#inbox?compose=CllgCJTLGSnFHcNXMjKWSSxXJHqjWJbDtbXPTXXnJPWzCMSSgTgQQbPNLRCxCcsbqKdkpWtRrcL" target="_blank">  
-                        <i class="fa-solid fa-envelope"></i>
-                        <span>agustinhborda@gmail.com</span>
-                    </a>
-                </div>
-                <div class="iconos">
-                        <i class="fa-solid fa-phone"></i>
-                        <span>+54 011 2868-3516</span>
-                </div>
+          <div class="skills" role="list">
+            <div class="skill" role="listitem" data-aos="zoom-in">
+              <h3><i class="fa-solid fa-plug" aria-hidden="true"></i> APIs & Servicios</h3>
+              <p>Diseño e implementación de endpoints REST, integraciones y servicios con ORDS.</p>
             </div>
-        </article>
+            <div class="skill" role="listitem" data-aos="zoom-in" data-aos-delay="40">
+              <h3><i class="fa-solid fa-database" aria-hidden="true"></i> Oracle / PL/SQL</h3>
+              <p>Paquetes, validaciones, integridad, procesos y mantenimiento de suite PL/SQL.</p>
+            </div>
+            <div class="skill" role="listitem" data-aos="zoom-in" data-aos-delay="80">
+              <h3><i class="fa-solid fa-gauge" aria-hidden="true"></i> SQL Performance</h3>
+              <p>Optimización, índices, planes de ejecución y queries eficientes.</p>
+            </div>
+            <div class="skill" role="listitem" data-aos="zoom-in" data-aos-delay="120">
+              <h3><i class="fa-brands fa-angular" aria-hidden="true"></i> Frontend Web</h3>
+              <p>Angular y bases sólidas de UI responsive para productos internos y portales.</p>
+            </div>
+          </div>
+
+          <div class="marquee" aria-label="Tecnologías">
+            <div class="marquee__track">
+              <span>ORDS</span><span>REST APIs</span><span>PL/SQL</span><span>Oracle</span><span>SQL</span><span>SQL Perf</span><span>JSON</span><span>Angular</span><span>TypeScript</span><span>Git</span><span>Java</span>
+              <span>ORDS</span><span>REST APIs</span><span>PL/SQL</span><span>Oracle</span><span>SQL</span><span>SQL Perf</span><span>JSON</span><span>Angular</span><span>TypeScript</span><span>Git</span><span>Java</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section class="section" id="proyectos">
+        <div class="container">
+          <div class="section__head">
+            <h2>Proyectos</h2>
+            <p>Una muestra de trabajos y pruebas técnicas que fui construyendo.</p>
+          </div>
+
+          <div class="projects">
+            <article class="project card" data-aos="fade-up">
+              <div class="project__media">
+                <img src="imagenes/w.png" alt="WebWizards" loading="lazy" />
+              </div>
+              <div class="project__body">
+                <h3>WebWizards</h3>
+                <p>
+                  Proyecto de agencia/servicio de creación de sitios web. Aprendizaje fuerte en
+                  presentación, comunicación con clientes y armado de landing pages.
+                </p>
+                <div class="tags">
+                  <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Hosting</span>
+                </div>
+                <div class="actions">
+                  <a class="btn btn--ghost" href="https://webwizardscompany.000webhostapp.com/" target="_blank" rel="noreferrer">
+                    Ver sitio
+                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project card" data-aos="fade-up" data-aos-delay="60">
+              <div class="project__media">
+                <img src="imagenes/image.png" alt="To Do — Tareas" loading="lazy" />
+              </div>
+              <div class="project__body">
+                <h3>To‑Do (CRUD + usuarios)</h3>
+                <p>
+                  App web para practicar alta/baja/modificación y autenticación.
+                  Enfocado en entender el flujo completo de una aplicación.
+                </p>
+                <div class="tags">
+                  <span class="tag">PHP</span><span class="tag">SQL</span><span class="tag">Bootstrap</span>
+                </div>
+                <div class="actions">
+                  <a class="btn btn--ghost" href="https://todo-agustinborda.000webhostapp.com/" target="_blank" rel="noreferrer">
+                    Ver demo
+                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project card" data-aos="fade-up" data-aos-delay="120">
+              <div class="project__media">
+                <img src="imagenes/controladordegastos.png" alt="Controlador de gastos" loading="lazy" />
+              </div>
+              <div class="project__body">
+                <h3>Controlador de Gastos</h3>
+                <p>
+                  App simple para registrar gastos y visualizar totales. Proyecto ideal para mejorar
+                  JavaScript y el manejo del DOM.
+                </p>
+                <div class="tags">
+                  <span class="tag">JavaScript</span><span class="tag">HTML</span><span class="tag">CSS</span>
+                </div>
+                <div class="actions">
+                  <a class="btn btn--ghost" href="https://controlador-gastos-agustinborda.netlify.app/" target="_blank" rel="noreferrer">
+                    Ver demo
+                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project card" data-aos="fade-up" data-aos-delay="180">
+              <div class="project__media project__media--grad">
+                <div class="project__icon">
+                  <i class="fa-solid fa-basketball" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="project__body">
+                <h3>App de estadísticas (basket)</h3>
+                <p>
+                  MVP en el que vengo trabajando para cuerpos técnicos: carga de partidos/entrenos y
+                  estadísticas de jugadores y equipo.
+                </p>
+                <div class="tags">
+                  <span class="tag">Producto</span><span class="tag">Data</span><span class="tag">MVP</span>
+                </div>
+                <div class="actions">
+                  <a class="btn btn--ghost" href="#contacto">Hablemos</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="section section--alt" id="contacto">
+        <div class="container">
+          <div class="section__head">
+            <h2>Contacto</h2>
+            <p>Si querés proponer un proyecto o una entrevista, escribime y coordinamos.</p>
+          </div>
+
+          <div class="contact">
+            <div class="card contact__card" data-aos="fade-up">
+              <h3>Redes</h3>
+              <div class="contact__list">
+                <a class="contact__item" href="https://www.linkedin.com/in/agustin-hernan-borda-85150921b/" target="_blank" rel="noreferrer">
+                  <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                  <span>LinkedIn</span>
+                  <span class="muted">/agustin-hernan-borda</span>
+                </a>
+                <a class="contact__item" href="https://github.com/AgusBorda" target="_blank" rel="noreferrer">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                  <span>GitHub</span>
+                  <span class="muted">@AgusBorda</span>
+                </a>
+                <a class="contact__item" href="mailto:agustinhborda@gmail.com">
+                  <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                  <span>Email</span>
+                  <span class="muted">agustinhborda@gmail.com</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="card contact__card" data-aos="fade-up" data-aos-delay="80">
+              <h3>Mensaje rápido</h3>
+              <form class="form" id="contactForm">
+                <label>
+                  <span>Nombre</span>
+                  <input type="text" name="name" autocomplete="name" placeholder="Tu nombre" required />
+                </label>
+                <label>
+                  <span>Email</span>
+                  <input type="email" name="email" autocomplete="email" placeholder="tu@email.com" required />
+                </label>
+                <label>
+                  <span>Mensaje</span>
+                  <textarea name="message" rows="4" placeholder="Contame en qué puedo ayudar" required></textarea>
+                </label>
+                <button class="btn btn--primary" type="submit">
+                  Enviar
+                  <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                </button>
+                <p class="form__hint">
+                  Esto abre tu cliente de correo con el mensaje listo (no guardo datos ni uso backend).
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <footer>
-
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p>© <span id="year"></span> Agus Borda. Hecho con HTML/CSS/JS para GitHub Pages.</p>
+        <a class="toTop" href="#top" aria-label="Volver arriba">
+          <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+        </a>
+      </div>
     </footer>
-  </body>
+
     <!-- Scripts -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js'></script> <!-- path of bodymovin library-->
-    <script src="https://kit.fontawesome.com/1b17ebe6a4.js" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-        window.addEventListener("scroll", function(){
-          var header = document.querySelector("header");
-          header.classList.toggle("abajo",window.scrollY>0);
-        })  
-      </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init();
+      AOS.init({ once: true, duration: 650, offset: 80 });
     </script>
+  </body>
 </html>
